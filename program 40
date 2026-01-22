@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    float expense, total = 0, average;
+
+    printf("Enter number of expense categories: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++) {
+        printf("Enter expense %d amount: ", i);
+        scanf("%f", &expense);
+        total = total + expense;
+    }
+
+    average = total / n;
+
+    printf("\n-----------------------------");
+    printf("\nTotal Monthly Expenses = %.2f", total);
+    printf("\nAverage Expense       = %.2f", average);
+    printf("\n-----------------------------\n");
+
+    return 0;
+}
