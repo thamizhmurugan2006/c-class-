@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int total, i, presentCount = 0;
+    int status;
+
+    printf("Enter total number of students: ");
+    scanf("%d", &total);
+
+    for(i = 1; i <= total; i++) {
+        printf("Enter attendance for student %d (1 = Present, 0 = Absent): ", i);
+        scanf("%d", &status);
+
+        if(status == 1) {
+            presentCount++;
+        }
+    }
+
+    printf("\n-----------------------------");
+    printf("\nTotal Students   = %d", total);
+    printf("\nPresent Students = %d", presentCount);
+    printf("\nAbsent Students  = %d", total - presentCount);
+    printf("\n-----------------------------\n");
+
+    return 0;
+}
