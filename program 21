@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int totalStudents, presentStudents, absentStudents;
+
+    printf("Enter total number of students: ");
+    scanf("%d", &totalStudents);
+
+    printf("Enter number of students present: ");
+    scanf("%d", &presentStudents);
+
+    if (presentStudents > totalStudents || presentStudents < 0) {
+        printf("Invalid input!\n");
+    } else {
+        absentStudents = totalStudents - presentStudents;
+
+        printf("\n----- Attendance Report -----\n");
+        printf("Total Students   : %d\n", totalStudents);
+        printf("Present Students : %d\n", presentStudents);
+        printf("Absent Students  : %d\n", absentStudents);
+    }
+
+    return 0;
+}
