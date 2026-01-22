@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    int marks, total = 0;
+
+    printf("Enter number of students: ");
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; i++) {
+        printf("Enter marks of student %d: ", i);
+        scanf("%d", &marks);
+        total = total + marks;
+    }
+
+    printf("\nTotal Marks of %d students = %d\n", n, total);
+
+    return 0;
+}
