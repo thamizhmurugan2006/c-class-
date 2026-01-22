@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int totalDays, holidays, leaves, workedDays;
+
+    printf("Enter total days in the month: ");
+    scanf("%d", &totalDays);
+
+    printf("Enter number of holidays: ");
+    scanf("%d", &holidays);
+
+    printf("Enter number of leave days taken: ");
+    scanf("%d", &leaves);
+
+    if (holidays + leaves > totalDays || holidays < 0 || leaves < 0) {
+        printf("Invalid input!\n");
+    } else {
+        workedDays = totalDays - (holidays + leaves);
+
+        printf("\n----- Work Report -----\n");
+        printf("Total Days   : %d\n", totalDays);
+        printf("Holidays     : %d\n", holidays);
+        printf("Leaves Taken : %d\n", leaves);
+        printf("Days Worked  : %d\n", workedDays);
+    }
+
+    return 0;
+}
