@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+struct Student {
+    int rollNo;
+    char name[30];
+};
+
+int main() {
+    struct Student s[50];
+    int n, add, i;
+
+    printf("Enter number of existing records: ");
+    scanf("%d", &n);
+
+    for(i = 0; i < n; i++) {
+        scanf("%d %s", &s[i].rollNo, s[i].name);
+    }
+
+    printf("Enter number of new records to add: ");
+    scanf("%d", &add);
+
+    for(i = n; i < n + add; i++) {
+        scanf("%d %s", &s[i].rollNo, s[i].name);
+    }
+
+    n = n + add;
+
+    printf("\nUpdated Records:\n");
+    for(i = 0; i < n; i++) {
+        printf("%d %s\n", s[i].rollNo, s[i].name);
+    }
+
+    return 0;
+}
