@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+// Function to display menu
+void showMenu() {
+    printf("\n1. Say Hello");
+    printf("\n2. Exit");
+}
+
+int main() {
+    int choice;
+
+    showMenu();   // Function call
+    printf("\nEnter your choice: ");
+    scanf("%d", &choice);
+
+    if (choice == 1)
+        printf("Hello! Welcome to C Programming.\n");
+    else if (choice == 2)
+        printf("Exiting program...\n");
+    else
+        printf("Invalid choice!\n");
+
+    return 0;
+}
