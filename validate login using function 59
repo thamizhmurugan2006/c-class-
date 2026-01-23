@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+
+int checkLogin(char u[], char p[]) {
+    return (strcmp(u, "admin") == 0 && strcmp(p, "1234") == 0);
+}
+
+int main() {
+    char user[20], pass[20];
+
+    printf("Username: ");
+    scanf("%s", user);
+
+    printf("Password: ");
+    scanf("%s", pass);
+
+    if (checkLogin(user, pass))
+        printf("Login Successful!\n");
+    else
+        printf("Invalid Login!\n");
+
+    return 0;
+}
